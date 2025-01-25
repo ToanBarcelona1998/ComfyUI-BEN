@@ -1,5 +1,3 @@
-import sys
-import os
 import torch
 from PIL import Image
 from torchvision import transforms
@@ -8,7 +6,7 @@ from .model import BEN_Base
 class BackgroundEraseNetwork:
     def __init__(self):
         self.model = BEN_Base()  # Initialize BEN_Base model
-        self.model.loadcheckpoints("BEN_Base.pth")  # Load the model weights
+        self.model.loadcheckpoints("models/bg_removal/BEN_Base.pth")  # Load the model weights
 
         # Define transformations for converting between PIL and Tensor
         self.to_pil = transforms.ToPILImage()

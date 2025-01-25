@@ -8,7 +8,7 @@ Remove backgrounds from images with [BEN](https://huggingface.co/PramaLLC/BEN) i
 ## Installation
 
 ```
-git clone https://github.com/DoctorDiffusion/ComfyUI-BEN.git
+git clone https://github.com/ToanBarcelona1998/ComfyUI-BEN.git
 ```
 ```
 cd ComfyUI-BEN
@@ -16,20 +16,9 @@ cd ComfyUI-BEN
 ```
 pip install -r requirements.txt
 ```
-Go to the [BEN huggingface page](https://huggingface.co/PramaLLC/BEN/tree/main) and download `BEN_Base.pth`, and `model.py` and place them inside:
+Go to the [BEN huggingface page](https://huggingface.co/PramaLLC/BEN/tree/main) and download `BEN_Base.pth` and put it inside:
 ```
-...ComfyUI/custom-nodes/ComfyUI-BEN/
-```
-The folder should look like this:
-```
-└── ComfyUI/custom-nodes/ComfyUI-BEN/
-    ├── __init__.py
-    ├── background_erase_network.py
-    ├── ben.png
-    ├── BEN_Base.pth
-    ├── model.py
-    ├── README.md
-    └── requirements.txt
+...ComfyUI/models/bg_removal/
 ```
 ## Nodes
 
