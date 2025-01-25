@@ -3,18 +3,12 @@ import os
 import torch
 from PIL import Image
 from torchvision import transforms
-
-# Add the directory of the current file to sys.path
-script_directory = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(script_directory)
-
-# Now import BEN_Base from model.py
-from model import BEN_Base
+from .model import BEN_Base
 
 class BackgroundEraseNetwork:
     def __init__(self):
         self.model = BEN_Base()  # Initialize BEN_Base model
-        self.model.loadcheckpoints("./ComfyUI/custom_nodes/ComfyUI-BEN/BEN_Base.pth")  # Load the model weights
+        self.model.loadcheckpoints("BEN_Base.pth")  # Load the model weights
 
         # Define transformations for converting between PIL and Tensor
         self.to_pil = transforms.ToPILImage()
